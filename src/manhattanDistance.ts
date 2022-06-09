@@ -1,3 +1,5 @@
-export function manhattanDistance(): number {
-  return 0;
+import Point from "./Point";
+
+export function manhattanDistance(pointA: Point, pointB: Point): number {
+  return pointA.distanceTo(pointB);
 }
