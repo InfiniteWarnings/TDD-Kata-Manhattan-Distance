@@ -33,9 +33,21 @@ describe("Point", () => {
     }
   );
 
-  it("Should calculate Manhattan distance", () => {
-    const pointA = new Point(3, 3);
-    const pointB = new Point(9, 9);
-    expect(pointA.distanceTo(pointB)).toBe(12);
-  });
+  const XYCoordinateCases = [
+    [[0, 0], [0, 0], 0],
+    [[3, 3], [9, 9], 12],
+    [[0, 3], [0, 9], 6],
+    [[3, 3], [3, 3], 0],
+    [[13, 3], [3, 20], 27],
+    [[6, 2], [2, 6], 8],
+  ];
+
+  test.each(XYCoordinateCases)(
+    "Should calculate Manhattan distance",
+    (coordinatesA, coordinatesB, expected) => {
+      const pointA = new Point(coordinatesA[0], coordinatesA[1]);
+      const pointB = new Point(coordinatesB[0], coordinatesB[1]);
+      expect(pointA.distanceTo(pointB)).toBe(expected);
+    }
+  );
 });
