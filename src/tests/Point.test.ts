@@ -6,7 +6,7 @@ describe("Point", () => {
     expect(point).toBeInstanceOf(Point);
   });
 
-  const horizontalCases = [
+  const singleCoordinateCases = [
     [0, 0, 0],
     [1, 0, 1],
     [0, 1, 1],
@@ -15,7 +15,7 @@ describe("Point", () => {
     [8, 12, 4],
   ];
 
-  test.each(horizontalCases)(
+  test.each(singleCoordinateCases)(
     "Should calculate horizontal distance",
     (pointAX, pointBX, expected) => {
       const pointA = new Point(pointAX, 0);
@@ -24,11 +24,14 @@ describe("Point", () => {
     }
   );
 
-  it("Should calculate vertical distance", () => {
-    const pointA = new Point(0, 3);
-    const pointB = new Point(0, 9);
-    expect(pointA.distanceTo(pointB)).toBe(6);
-  });
+  test.each(singleCoordinateCases)(
+    "Should calculate vertical distance",
+    (pointAY, pointBY, expected) => {
+      const pointA = new Point(0, pointAY);
+      const pointB = new Point(0, pointBY);
+      expect(pointA.distanceTo(pointB)).toBe(expected);
+    }
+  );
 
   it("Should calculate Manhattan distance", () => {
     const pointA = new Point(3, 3);
