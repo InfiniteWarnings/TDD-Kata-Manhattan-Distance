@@ -16,7 +16,8 @@ export default class Point {
   }
 
   public distanceTo(point: Point): number {
-    // Manhattan distance: absolute value of (x1 - x2) + (y1 - y2)
-    return Math.abs(this.x - point.x + this.y - point.y);
+    // CORRECTED Manhattan distance: abs(x1 - x2) + abs(y1 - y2)
+    // the sum of the absolute values of the differences between BOTH sets of coordinates.
+    return Math.abs(this.x - point.x) + Math.abs(this.y - point.y);
   }
 }
