@@ -13,8 +13,10 @@ describe("Point", () => {
     [3, 9, 6],
     [9, 3, 6],
     [8, 12, 4],
+    [-12, 10, 22],
   ];
 
+  //x1,x1,expected
   test.each(singleCoordinateCases)(
     "Should calculate horizontal distance",
     (pointAX, pointBX, expected) => {
@@ -24,6 +26,7 @@ describe("Point", () => {
     }
   );
 
+  //y1,y1,expected
   test.each(singleCoordinateCases)(
     "Should calculate vertical distance",
     (pointAY, pointBY, expected) => {
@@ -33,6 +36,7 @@ describe("Point", () => {
     }
   );
 
+  //[x1,y1],[x2,y2],expected
   const XYCoordinateCases = [
     [[0, 0], [0, 0], 0],
     [[3, 3], [9, 9], 12],
@@ -40,6 +44,8 @@ describe("Point", () => {
     [[3, 3], [3, 3], 0],
     [[13, 3], [3, 20], 27],
     [[6, 2], [2, 6], 8],
+    [[-12, -8], [12, 6], 38],
+    [[0, 0], [-3, 5], 8],
   ];
 
   test.each(XYCoordinateCases)(
