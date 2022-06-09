@@ -11,4 +11,10 @@ describe("Point", () => {
     const pointB = new Point(9, 0);
     expect(pointA.distanceTo(pointB)).toBe(6);
   });
+
+  it("Should calculate vertical distance", () => {
+    const pointA = new Point(0, 3);
+    const pointB = new Point(0, 9);
+    expect(pointA.distanceTo(pointB)).toBe(6);
+  });
 });
