@@ -17,4 +17,10 @@ describe("Point", () => {
     const pointB = new Point(0, 9);
     expect(pointA.distanceTo(pointB)).toBe(6);
   });
+
+  it("Should calculate Manhattan distance", () => {
+    const pointA = new Point(3, 3);
+    const pointB = new Point(9, 9);
+    expect(pointA.distanceTo(pointB)).toBe(12);
+  });
 });
