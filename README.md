@@ -1,14 +1,12 @@
-# TypeScript Jest boilerplate
+# Manhattan Distance Kata
 
-This boilerplate uses TypeScript and Jest as testing framework.
-Test files should are picked based on their name, here's a few examples that will get picked up by Jest:
+Kata at: https://kata-log.rocks/manhattan-distance-kata
+Bootstrapped TS project from: https://github.com/swkBerlin/kata-bootstraps
 
-- `MyClass.test.ts`
-- `MyJavaScriptModule.test.js`
-- `MyComponent.test.tsx`
-- `SubFolder/MyClass.test.ts`
+## Used stack
 
-You can customize the regexp and jest configuration by editing the `package.json` file.
+- Typescript
+- jest
 
 ## Installing dependencies
 
