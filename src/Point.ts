@@ -7,15 +7,16 @@
  */
 
 export default class Point {
-  private x: Number;
-  private y: Number;
+  private x: number;
+  private y: number;
 
-  constructor(x: Number, y: Number) {
+  constructor(x: number, y: number) {
     this.x = x;
     this.y = y;
   }
 
-  public distanceTo(point: Point) {
-    return 6;
+  public distanceTo(point: Point): number {
+    // Manhattan distance: absolute value of (x1 - x2) + (y1 - y2)
+    return Math.abs(this.x - point.x + this.y - point.y);
   }
 }
