@@ -1,6 +1,7 @@
 # Manhattan Distance Kata
 
 Kata at: https://kata-log.rocks/manhattan-distance-kata
+
 Bootstrapped TS project from: https://github.com/swkBerlin/kata-bootstraps
 
 ## Used stack
